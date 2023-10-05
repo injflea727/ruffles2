@@ -167,5 +167,15 @@ function load(options) {
         }
     });
 }
+async function loadFile(file) {
+    if (!file) {
+        return;
+    }
+    if (file.name) {
+        localFileName.textContent = file.name;
+    }
+    const data = await new Response(file).arrayBuffer();
+    load({ data: data, swfFileName: file.name, ...defaultConfig });
+}
 </script>
 </html>
