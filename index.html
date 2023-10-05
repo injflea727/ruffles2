@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html>
+   <div id="local-file-container">
+                    <span id="local-file-static-label">Local SWF:</span>
+                    <input type="file" accept=".swf,.spl" id="local-file" 
+                        aria-describedby="local-file-static-label" />
+                    <label for="local-file" id="local-file-label">Select File</label>
+                    <span id="local-file-name">No file selected.</span>
+                </div>
    <script src="ruffle.js"></script>
   <script>
     window.RufflePlayer = window.RufflePlayer || {};
